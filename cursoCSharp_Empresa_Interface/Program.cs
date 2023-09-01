@@ -4,7 +4,7 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        List<Empresa> empresas = new List<Empresa>
+        List<IEmpresaAcoes> empresas = new List<IEmpresaAcoes>
         {
             new Varejo("Loja A", "Rua Cosmorama, 123", "12.345.678/0001-90", "(11) 1234-5678"),
             new Empreiteira("Empreiteira A", "Avenida Solar, 456", "98.765.432/0001-21", "(11) 9876-5432")
@@ -12,15 +12,11 @@ internal class Program
 
         foreach (var empresa in empresas)
         {
-            if (empresa is IInformacoes info)
+            if (empresa is Empresa entidadeEmpresa)
             {
-                info.ImprimirInformacoes(empresa);
+                empresa.ImprimirInformacoes(entidadeEmpresa);
             }
-
-            if (empresa is IVenda vendedor)
-            {
-                vendedor.RealizarVenda();
-            }
+            empresa.RealizarVenda();
             Console.WriteLine();
         }
     }

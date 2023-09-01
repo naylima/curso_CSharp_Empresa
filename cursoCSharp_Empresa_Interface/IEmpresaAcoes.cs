@@ -1,9 +1,11 @@
 ﻿using System;
 namespace cursoCSharp_Empresa_Interface
 {
-	public interface IInformacoes
+	public interface IEmpresaAcoes
     {
-        public void ImprimirInformacoes(Empresa empresa)
+        void RealizarVenda();
+
+        void ImprimirInformacoes(Empresa empresa)
         {
             Console.WriteLine($"Nome: {empresa.Nome}");
             Console.WriteLine($"Endereço: {empresa.Endereco}");
