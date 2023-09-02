@@ -1,27 +1,44 @@
-## Exercício 1
+# Exercícios de Programação Orientada a Objetos
 
-Crie uma classe Empresa que possua os dados básicos de uma empresa como propriedades.
-Construa um método para imprimir as informações da empresa.
-Construa um método abstrato void RealizarVenda()
+## Exercício 1: Classes e Métodos Abstratos
 
-Crie uma classe Varejo que implemente o método abstrato para imprimir que vende produtos.
-Crie uma classe Empreiteira que implemente o método abstrato para imprimir que vende serviços.
+### Descrição:
+- **Classe Empresa**:
+  - Propriedades básicas de uma empresa.
+  - Método para imprimir informações da empresa.
+  - Método abstrato `void RealizarVenda()`.
 
-Na main, crie um objeto de cada classe, preenchendo as propriedades e invocando os métodos.
+- **Classe Varejo**:
+  - Implementa o método abstrato e imprime que a empresa vende produtos.
 
-## Exercício 2
-Faça o mesmo exercício aplicando Interfaces.
-Crie a classe base para herdar as propriedades porém façam os métodos através de implementação de Interface.
+- **Classe Empreiteira**:
+  - Implementa o método abstrato e imprime que a empresa vende serviços.
 
-Na main, crie uma lista de interface.
-Adicione um objeto de cada classe do tipo da interface, preenchendo as propriedades
-Invoque os métodos da lista.
+**Execução**:
+Na função main, crie um objeto de cada classe, preencha suas propriedades e invoque os métodos pertinentes.
 
-## Exercício 3
+## Exercício 2: Aplicação de Interfaces
 
-Vamos pegar o projeto de vcs da Empresa com interfaces!
-Crie uma interface EnviarNotificacao com um método void EnviarMensagemCliente.
-Crie uma classe EnviarNotificacaoWhatsApp, que implementa EnviarNotificacao e nela teremos o método EnviarMensagemCliente que printa a notificação: "Estou enviando uma mensagem no WhatsApp do Cliente!";
+### Descrição:
+- Implemente o exercício anterior usando interfaces.
+- Crie uma classe base para herdar as propriedades.
+- Implemente os métodos usando interfaces.
 
-Dentro da classe Varejo, vamos incluir um private readonly EnviarNotificacaoWhatsApp que é recebido no construtor da classe.
-Após Realizar a venda, utilizaremos o método de EnviarNotificacao.
+**Execução**:
+Na função main, crie uma lista de interface. Adicione um objeto de cada classe (do tipo da interface), preencha suas propriedades e invoque os métodos da lista.
+
+## Exercício 3: Notificações via Interface
+
+### Descrição:
+- Baseado no projeto do Exercício 2 (Empresa com interfaces):
+  - **Interface EnviarNotificacao**:
+    - Método: `void EnviarMensagemCliente()`.
+
+  - **Classe EnviarNotificacaoWhatsApp**:
+    - Implementa a interface `EnviarNotificacao`.
+    - O método `EnviarMensagemCliente` imprime: "Estou enviando uma mensagem no WhatsApp do Cliente!".
+
+  - **Classe Varejo** (modificação):
+    - Inclui uma instância privada e somente leitura de `EnviarNotificacaoWhatsApp`, recebida no construtor da classe.
+    - Após realizar a venda, utilize o método `EnviarNotificacao`.
+
